@@ -25,7 +25,6 @@ node ../../../index.mjs create-keys 172.24.0.21
 cd ../../..
 
 
-
 # Create genesis.json with Clique PoA configuration
 cat > networks/besu-network/genesis.json << EOF
 {
