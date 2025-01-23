@@ -21,7 +21,8 @@ docker network create besu-network \
 cd networks/besu-network
 mkdir -p bootnode
 cd bootnode
-node ../../../index.mjs create-keys 172.24.0.21 
+node ../../../index.mjs create-keys ${BOOTNODE_IP}
+# create address enode private key and public key
 cd ../../..
 
 
@@ -78,7 +79,7 @@ docker run -d \
   --config-file=/data/config.toml \
   --data-path=/data/bootnode/data \
   --node-private-key-file=/data/bootnode/key.priv \
-  --genesis-file=/data/genesis.json
+
 
 
 # create keys for test in current dir
